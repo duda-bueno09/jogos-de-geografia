@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aventura Geo – Quiz de Geografia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1 class="logo"><span class="globo">🌎</span> Aventura Geo</h1>
+    <div id="painel" class="painel escondido">
+      <span class="chip" id="chip-nivel">⭐ Fácil</span>
+      <span class="chip" id="vidas" aria-label="Vidas">❤️❤️❤️</span>
+      <span class="chip" id="pontos">🏆 0</span>
+    </div>
+  </header>
+
+  <main class="palco">
+    <!-- TELA INICIAL: escolha do nível -->
+    <section id="tela-inicio" class="tela">
+      <div class="mascote">🧭</div>
+      <h2>Escolha seu nível!</h2>
+      <div class="niveis">
+        <button class="btn-nivel verde" data-nivel="facil">
+          <span class="icone">🌱</span><span>Fácil</span><small>⭐</small>
+        </button>
+        <button class="btn-nivel amarelo" data-nivel="medio">
+          <span class="icone">🏔️</span><span>Médio</span><small>⭐⭐</small>
+        </button>
+        <button class="btn-nivel vermelho" data-nivel="dificil">
+          <span class="icone">🌋</span><span>Difícil</span><small>⭐⭐⭐</small>
+        </button>
+      </div>
+      <p class="dica">Você tem 3 ❤️. Acertou? Ganha pontos! Errou? Perde uma vida.</p>
+    </section>
+
+    <!-- TELA DO JOGO -->
+    <section id="tela-jogo" class="tela escondido">
+      <div class="barra"><div id="progresso" class="progresso"></div></div>
+      <div id="emoji-pergunta" class="emoji-pergunta">🗺️</div>
+      <h2 id="pergunta" class="pergunta">Pergunta</h2>
+      <div id="opcoes" class="opcoes"></div>
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+      <button id="btn-proxima" class="btn-grande escondido">Próxima ➡️</button>
+    </section>
+
+    <!-- TELA FINAL -->
+    <section id="tela-fim" class="tela escondido">
+      <div id="fim-emoji" class="mascote">🏆</div>
+      <h2 id="fim-titulo">Parabéns!</h2>
+      <p id="fim-texto" class="fim-texto"></p>
+      <div id="fim-estrelas" class="estrelas"></div>
+      <div class="acoes">
+        <button id="btn-repetir" class="btn-grande">🔄 Jogar de novo</button>
+        <button id="btn-menu" class="btn-grande secundario">🏠 Escolher nível</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Geografia • 6º ano • Feito com 💙</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
